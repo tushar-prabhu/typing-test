@@ -30,7 +30,6 @@ html.ie8 #ie-upgrade-warning {
   display: block !important;
 }
 body {
-  /*background: url('https://img.10fastfingers.com/img/layout/sprite-horizontal.png') 0px -125px repeat-x #add5ff;*/
   background-color: #000000;
   overflow-x: hidden;
 }
@@ -56,12 +55,12 @@ body {
 }
 .top-first-bg {
   border-top: 1px solid #444;
-  background: url('https://img.10fastfingers.com/img/layout-responsive/top-nav-bg.png') 0px 2px repeat-x #2e353d;
+  background-color: #161C20;
   -webkit-box-shadow: 0px 3px 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.2);
 }
 #top-toggle-btn {
-  background: #589ee9;
+  background: #161C20;
 }
 #top-toggle-btn span.icon-bar {
   background: #fff;
@@ -88,7 +87,6 @@ a.navbar-brand {
   margin-left: 11px;
   width: 123px;
   height: 39px;
-  /*background-image: url('https://img.10fastfingers.com/img/layout/logo@2x.png');*/
   background-size: 123px 39px;
 }
 #tagline {
@@ -102,7 +100,6 @@ a.navbar-brand {
   float: left;
   width: 123px;
   height: 39px;
-  background: url('https://img.10fastfingers.com/img/layout/sprite-main.png') -256px -432px;
   margin-top: 4px;
   margin-left: 10px;
 }
@@ -113,7 +110,6 @@ a.navbar-brand {
 .second-row span#notification-minibox {
   display: inline-block;
   margin-right: 20px;
-  background: url('https://img.10fastfingers.com/img/layout-responsive/trans-white-bg-10.png');
   padding: 5px 10px 6px 10px;
 }
 .second-row span#user-minibox {
@@ -121,7 +117,6 @@ a.navbar-brand {
   display: inline-block;
   margin-top: 7px;
   padding: 5px 15px 2px 15px;
-  background: url('https://img.10fastfingers.com/img/layout-responsive/trans-white-bg-10.png');
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
@@ -169,121 +164,15 @@ a.navbar-brand {
   padding-top: 5px;
   height: 24px;
 }
-#bottom-navbar .navbar-inner {
-  background: url('https://img.10fastfingers.com/img/layout/background/bottom-nav-bg.png') repeat-x;
-}
-#news-updates-dropdown a.dropdown-toggle {
-  color: white;
-}
-#active-competitions-dropdown a.dropdown-toggle {
-  color: white;
-}
-#active-competitions-dropdown table {
-  width: 320px;
-}
-#active-competitions-dropdown table td {
-  padding-top: 10px;
-  z-index: 10;
-}
-#active-competitions-dropdown table td i {
-  margin-top: 2px;
-}
-#active-competitions-dropdown table td.join {
-  width: 50px;
-  padding-top: 2px;
-  padding-right: 10px;
-}
-#active-competitions-dropdown table td.flag {
-  width: 34px;
-  padding-top: 5px;
-}
-#active-competitions-dropdown table td.participants {
-  width: 50px;
-  font-size: 16px;
-  color: #000;
-  font-weight: bold;
-  text-align: right;
-}
-#active-competitions-dropdown table td.tests-taken {
-  width: 40px;
-  font-size: 14px;
-  text-align: left;
-  color: #555;
-}
-#active-competitions-dropdown table td.created {
-  width: 35px;
-  font-size: 14px;
-  text-align: right;
-  padding-right: 15px;
-}
 #select-mode:hover ul.dropdown-menu {
   display: block;
 }
 #select-lang:hover ul.dropdown-menu {
   display: block;
 }
-ul#notification-list {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
-}
-ul#notification-list li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  margin: -10px;
-  margin-bottom: 15px;
-}
-ul#notification-list li .created {
-  font-size: 0.8em;
-  color: #bbb;
-}
-ul#notification-list li:last-child {
-  border: none;
-}
-ul#notification-list li.new {
-  background: #fdecc8;
-}
-li#my-mini-profile {
-  float: left;
-}
-li#my-mini-profile a#my-mini-profile-link {
-  margin-top: -4px;
-  padding: 5px;
-  padding-top: 4px;
-  padding-bottom: 3px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 10px;
-  height: 24px;
-  color: #fff;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-}
-li#my-mini-profile a#my-mini-profile-link:hover {
-  background: #3B4C5A !important;
-}
-li#my-mini-profile a#my-mini-profile-link img {
-  margin-right: 10px;
-  margin-top: -4px;
-  background: white;
-  border: 1px solid #333;
-}
-li#my-mini-profile a#my-mini-profile-link #remember-me-social-toggle label {
-  padding-left: 10px;
-}
-#advertisement #left {
-  float: left;
-  background: #BFDEFF;
-}
-#advertisement #right {
-  float: right;
-  background: #c2defc;
-  margin-right: 20px;
-}
 .trenner {
   width: 2px;
   height: 46px;
-  background: url('https://img.10fastfingers.com/img/layout/sprite-main.png') -252px -144px no-repeat;
 }
 .main-layout {
   padding-top: 10px;
@@ -330,12 +219,10 @@ li#my-mini-profile a#my-mini-profile-link #remember-me-social-toggle label {
 #main-content-trenner {
   height: 18px;
   margin-top: 20px;
-  background: url('https://img.10fastfingers.com/img/layout/sprite-horizontal.png') 0px -94px repeat-x;
 }
 #content-bg {
   padding-top: 20px;
   padding-bottom: 40px;
-  background: url('https://img.10fastfingers.com/img/layout/background/content-bg.png');
   border-bottom: 1px solid white;
 }
 #content-bg h3 {
