@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+	<title>IT Forum Blind Typing Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+	
+    
+</head>
+
+<body bgcolor="white">
+
+	<div class="top-first-bg">
+
+	<div class="container-modified">
+		<nav id="navbar-top-first" class="navbar navbar-default" role="navigation">
+        <h2><center><font color="#ffffff">IT Forum Blind typing Competition</font></center></h2>
+		</nav>
+	</div>
+
+</div>	
+	<br />
+
+<div class="container-modified">	
+<div class="row main-layout">
+	<div class="col-sm-8 col-md-8 col-lg-8">
+
+		<div id="settings-container">
+			<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" id="settings-link" style="margin-bottom: 10px;">
+				<span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Open Settings
+			</button>
+
+			<div id="settings">
+				<!--<p>
+					<strong>Duration: </strong>
+					<select id="settings-duration">
+						<option value="30">30 seconds</option>
+						<option value="60" selected>1 minute</option>
+						<option value="120">2 minutes</option>
+						<option value="300">5 minutes</option>
+						<option value="600">10 minutes</option>
+					</select>
+				</p>-->
+
+				<strong>Wordlist</strong> <small>(if you want to randomize, separate each word or phrase with a "|")</small>
+				<textarea></textarea>
+
+				<label><input type="checkbox" name="randomize" value="randomize" checked> Randomize</label>
+
+				<br />
+				<br />
+				<p><button id="apply-settings">Apply Settings</button></p>
+			</div>
+		</div>
+
+		<style type="text/css">
+    #typing-container {margin-bottom: 140px;}
+
+    #input-row {}
+    #input-row input {width: 100%; padding: 10px; border-top: 1px solid #575757; height: 50px; border-right: 1px solid #6b7a89; border-bottom: 1px solid #70869b; border-left: 1px solid #525a62; font-size: 2.0em; line-height: 1.0em; font-family: Times New Roman, Times, serif; color: #333333; }
+    #wordlist {display:none;}
+
+    span.highlight {background: gray;}
+
+    #poweredby {margin-top: 10px;}
+    #poweredby a {text-decoration:none;}
+    #poweredby span {color: #999; line-height: 30px; font-family: helvetica,arial,clean,sans-serif; font-size: 10px; font-style: italic; float: left; margin: 10px 5px 0 0}
+    #poweredby img {float: left; border: 0; outline: none; margin-top: 5px;}
+    #poweredby a#createyourown {float: right; font-style:italic; color: gray; margin-top: 15px;}
+    #poweredby a#createyourown:hover {text-decoration:underline;}
+
+    #words {
+        padding:6px 12px 10px 12px;
+        margin-top:0px;
+        margin-bottom:10px;
+        height:110px;
+        overflow:hidden;
+        color:#1d4851;
+        font-family:Times New Roman, Times, serif;
+        font-size:2.2em;
+        line-height:1.6em;
+        background:#ffffff;
+        border:1px solid #8eb6d8;
+        -webkit-border-radius:4px;
+        -moz-border-radius:4px;
+        border-radius:4px;
+        -webkit-touch-callout:none;
+        -webkit-user-select:none;
+        -khtml-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+    }
+    #row1 {
+        position:relative;
+        color:#111111;
+    }
+    #row1 span {
+        padding:3px 5px 3px 5px;
+        margin-right:-7px;
+    }
+    #input-row {
+        padding:4px;
+        background:#a7c8e7;
+        -webkit-border-radius:4px;
+        border-radius:4px;
+    }
+    #input-row #inputfield {
+        float: left;
+        border-top:1px solid #575757;
+        height:50px;
+        border-right:1px solid #6b7a89;
+        border-bottom:1px solid #70869b;
+        border-left:1px solid #525a62;
+        font-size:2.0em;
+        line-height:1.0em;
+        font-family:Times New Roman, Times, serif;
+        color:#333333;
+    }
+    #input-row #timer {float:left; width: 70px; margin-right: 7px; cursor: pointer; cursor: hand; padding-top:10px; height:50px; text-align:center; font-size:1.6em; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; color:white; background:#3c4d5c; }
+    .hide-time { color:#3c4d5c !important; }
+    #words .highlight { background:#dddddd; color:#000000; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; }
+    .highlight-wrong { background:red; }
+    .correct { color:green; }
+    .wrong { color:red; }
+    #inputstream { display:none; }
+    #wordlist { display:none; }
+
+    #reload-btn { float:right; width: 60px;}
+    #reload-btn button {
+        width: 50px; height:50px;
+        background: #3498db;
+        background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+        background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+        background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+        background-image: -o-linear-gradient(top, #3498db, #2980b9);
+        background-image: linear-gradient(to bottom, #3498db, #2980b9);
+        border-color: #2980b9;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        border-style:solid;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 28px;
+        padding: 7px 7px 7px 7px;
+        text-decoration: none;
+    }
+    #reload-btn button:hover {
+        background: #3cb0fd;
+        cursor: pointer; cursor: hand;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        text-decoration: none;
+    }
+
+    #settings-container {font-size: 1.2em;}
+    #settings-container a {color: #0675d8; text-decoration:none;}
+    #settings-container a:hover {text-decoration:underline;}
+    #settings {
+        display:none;
+        border: 1px solid rgba(33, 113, 185, 0.47);
+        padding: 20px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background: white;
+    }
+    #settings textarea {width: 100%; min-height: 260px;}
+
+    #embed {display:none;}
+    #embed input {width: 100%; padding: 6px; color: #333; margin-bottom: 5px;}
+
+
+
+    #auswertung-result {font-family: arial;padding:0;display:none;width:280px;float:left;margin: 20px; margin-left:0px;background:#fff;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-webkit-box-shadow:1px 1px 1px 1px rgba(154,190,227,0.9);-moz-box-shadow:1px 1px 1px 1px rgba(154,190,227,0.9);box-shadow:1px 1px 1px 1px rgba(154,190,227,0.9)}
+    #auswertung-result h3{color:#fff;background:#4d7f9f;font-size:16px;padding:8px 15px;margin:0;font-weight:bold;text-shadow:1px 1px 1px #333;filter:dropshadow(color=#333333,offx=1,offy=1);-moz-border-radius-topleft:3px;-moz-border-radius-topright:3px;-moz-border-radius-bottomright:0;-moz-border-radius-bottomleft:0;-webkit-border-radius:3px 3px 0 0;border-radius:3px 3px 0 0;background:#5e91b3;background:-moz-linear-gradient(top,#5e91b3 0,#407191 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#5e91b3),color-stop(100%,#407191));background:-webkit-linear-gradient(top,#5e91b3 0,#407191 100%);background:-o-linear-gradient(top,#5e91b3 0,#407191 100%);background:-ms-linear-gradient(top,#5e91b3 0,#407191 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5e91b3',endColorstr='#407191',GradientType=0);background:linear-gradient(top,#5e91b3 0,#407191 100%)}
+    #auswertung-result #result-table td {padding: 8px; line-height: 1.428571429; vertical-align: top; border-top: 1px solid #ddd;}
+    #auswertung-result #result-table tr:first-child td {border:none;}
+    #auswertung-result #result-table td:first-child  {width:120px;}
+    #auswertung-result #result-table td:nth-child(2)  {width:120px;}
+    #auswertung-result #result-table td#wpm{text-align:center}
+    #auswertung-result #result-table td#wpm strong{font-size:46px;color:#527a1e;display:block;margin-bottom:-9px;padding: 5px;}
+    #auswertung-result #result-table td#wpm small{color:#81888c;font-size:12px}
+    #auswertung-result #result-table tr#keystrokes small{font-size:12px;margin-right:5px;position:relative;top:-2px}
+    #auswertung-result #result-table tr#correct .value{color:green}
+    #auswertung-result #result-table tr#wrong .value{color:red}
+    #auswertung-result #result-table td.name{font-size:16px;padding-left:20px;width:160px}
+    #auswertung-result #result-table td.value{font-size:16px;text-align:right;padding-right:20px}
+    #auswertung-result p{font-size:1.4em;margin-top:20px;text-align:center}
+    #auswertung-share h3{color:#fff;background:#4d7f9f;font-size:16px;padding:8px 15px;font-weight:bold;text-shadow:1px 1px 1px #333;filter:dropshadow(color=#333333,offx=1,offy=1);-moz-border-radius-topleft:3px;-moz-border-radius-topright:3px;-moz-border-radius-bottomright:0;-moz-border-radius-bottomleft:0;-webkit-border-radius:3px 3px 0 0;border-radius:3px 3px 0 0;background:#5e91b3;background:-moz-linear-gradient(top,#5e91b3 0,#407191 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#5e91b3),color-stop(100%,#407191));background:-webkit-linear-gradient(top,#5e91b3 0,#407191 100%);background:-o-linear-gradient(top,#5e91b3 0,#407191 100%);background:-ms-linear-gradient(top,#5e91b3 0,#407191
+
+</style>
+
+
+<div id="typing-container">
+    <div id="words" class="row">
+        <div id="row1"></div>
+    </div>
+
+    <div id="input-row">
+        <div style="margin-right: 137px;"><input type="text" class="form-control" id="inputfield" value="" dir="ltr" placeholder="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div>
+        <div style="float:right; width: 130px; height:50px; overflow:hidden;">
+            <div id="timer" title="click to show/hide countdown">1:00</div>
+            <div style="width: 50px; float: left;" id="reload-btn"><button>↻</button></div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div id="wordlist">about|above|add|after|again|air|all|almost|along|also|always|America|an|and|animal|another|answer|any|are|around|as|ask|at|away|back|be|because|been|before|began|begin|being|below|between|big|book|both|boy|but|by|call|came|can|car|carry|change|children|city|close|come|could|country|cut|day|did|different|do|does|don't|down|each|earth|eat|end|enough|even|every|example|eye|face|family|far|father|feet|few|find|first|follow|food|for|form|found|four|from|get|girl|give|go|good|got|great|group|grow|had|hand|hard|has|have|he|head|hear|help|her|here|high|him|his|home|house|how|idea|if|important|in|Indian|into|is|it|its|it's|just|keep|kind|know|land|large|last|later|learn|leave|left|let|letter|life|light|like|line|list|little|live|long|look|made|make|man|many|may|me|mean|men|might|mile|miss|more|most|mother|mountain|move|much|must|my|name|near|need|never|new|next|night|no|not|now|number|of|off|often|oil|old|on|once|one|only|open|or|other|our|out|over|own|page|paper|part|people|picture|place|plant|play|point|put|question|quick|quickly|quite|read|really|right|river|run|said|same|saw|say|school|sea|second|see|seem|sentence|set|she|should|show|side|small|so|some|something|sometimes|song|soon|sound|spell|start|state|still|stop|story|study|such|take|talk|tell|than|that|the|their|them|then|there|these|they|thing|think|this|those|thought|three|through|time|to|together|too|took|tree|try|turn|two|under|until|up|us|use|very|walk|want|was|watch|water|way|we|well|went|were|what|when|where|which|while|white|who|why|will|with|without|word|work|world|would|write|year|you|young|your</div>
+
+
+    <div style="clear:both"></div>
+    <div id="auswertung-result">
+        <h3>Result</h3>
+        <table class="table table-striped" id="result-table">
+            <tbody>
+                <tr><td id="wpm" class="name" colspan="2" title="Words per Minute: 1 word equals 5 keystrokes"><strong>21 WPM</strong> <small>(words per minute)</small></td></tr>
+                <tr id="keystrokes"><td class="name">Keystrokes</td><td class="value"><small>(<span class="correct">103</span> | <span class="wrong">9</span>)</small>&nbsp;<span class="all">112</span></td></tr>
+                <tr id="correct"><td class="name">Correct words</td><td class="value"> <strong>16</strong></td></tr>
+                <tr id="wrong"><td class="name">Wrong words</td><td class="value"> <strong>2</strong></td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    var keys = {};					//liest die gedrückten Tasten ein, wird genutzt für Mac/Safari "Smart" Reload
+    var setval = "";				//die Variable fÃ¼r den Timer/setInterval
+    var input_key_value = 32;
+    var $inputfield = $("input#inputfield");
+    var $row1 = $("#row1");
+    var $reloadBtn = $("#reload-btn");
+    var $row1_span_wordnr;
+
+    var param_duration = 60; //default 1 minute/ 60 seconds
+    var param_rand = 1; //randomization active
+    var param_words = ''; //words picked by the user
+
+    $(document).ready(function()
+    {
+
+        read_url_data();
+        update_embed_input_content();
+        restart();
+        activate_keylistener();
+
+        $("button#apply-settings").on('click', function(){
+            apply_settings();
+        });
+
+        $("#settings-link").on('click', function(){
+            $("#settings").slideToggle();
+        });
+
+        $("#embed-link").on('click', function(){
+            $("#embed").slideToggle();
+        });
+
+        //reload-button
+        //oder "F5"-Taste abfangen
+        $(document).keydown(function(event) {
+            if ( event.which == 116 ) {
+                loading = 1;
+                restart();
+                return false;
+            }
+
+            keys[event.which] = true;
+        });
+
+        $(document).keyup(function (event) {
+            delete keys[event.which];
+        });
+
+        $("#reload-btn").on('click', function(){
+            restart();
+            return false;
+        });
+    });
+
+    function read_url_data() {
+        param_duration = GetURLParameter('dur');
+        param_rand = GetURLParameter('rand');
+        param_words = GetURLParameter('words');
+
+        //recover apostrophe from %27 => '
+        if(typeof param_words !== 'undefined') {
+            param_words = param_words.split("%27").join("'");
+            param_words = param_words.split("%20").join(" ");
+            param_words = decodeURIComponent(param_words);
+            $("#settings textarea").text(param_words)
+            $('#wordlist').text(param_words);
+        } else
+            param_words = '';
+
+        //check if duration exists and is integer value
+        if (typeof param_duration === 'undefined')
+            param_duration = 60;
+
+        if (typeof param_rand === 'undefined')
+            param_rand = 1;
+
+        $("select#settings-duration option").each(function(){
+            if($(this).val() == param_duration){ // EDITED THIS LINE
+                $(this).attr("selected","selected");
+            }
+        });
+
+        if(param_rand == 0)
+            $("input[name='randomize']").prop('checked', false);
+    }
+
+    function apply_settings() {
+        // clean the input to prevent xss
+        $('#wordlist').html($("#settings textarea").val().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'));
+
+        //adjust URL parameters
+        history.replaceState(null, null, 'https://10fastfingers.com/widget/typingtest?dur=' + $("select#settings-duration option:selected").val() + '&rand=' + $("input[type='checkbox']:checked").length + '&words='+$("#settings textarea").val());
+
+        read_url_data();
+
+        update_embed_input_content();
+
+        restart();
+    }
+
+    function update_embed_input_content()
+    {
+        var tmp_param_words = param_words.replace(/ /g, "%20"); // convert SPACE for url
+        var tmp_param_words = tmp_param_words.replace(/'/g, "%27"); // convert ' for url
+        var tmp_param_words = tmp_param_words.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+        
+        var embed_settings = '?dur=' + param_duration + '&rand=' + param_rand + '&words=' + tmp_param_words;
+        var embed_code = '<iframe width="640" height="600" src="https://10fastfingers.com/widgets/ttembeddable/'+ embed_settings +'" frameborder="0"></iframe>';
+        $("#embed input").val(embed_code);
+    }
+
+    function restart()
+    {
+        //wird beim start und beim klick auf "restart" aufgerufen
+        //ruft initialisierungsfunktionen auf und setzt werte zurÃ¼ck auf den startwert
+        word_string = '';
+        words = '';
+        row1_string = '';
+        word_pointer = 0;
+        user_input_stream = '';
+        countdown = param_duration;
+        cd_started = 0;
+        previous_position_top = 0;
+        row_counter = 0;
+        eingabe = '';
+        min_words = 0;
+        //start_time_set = 0;
+
+        result_wpm  = 0;
+        result_correct = 0;
+        result_wrong = 0;
+        result_keystrokes_correct = 0;
+        result_keystrokes_wrong = 0;
+        backspace_counter = 0;
+
+        var timer_string = "0:00";
+
+        if(countdown == 30) {
+            var timer_string = "0:30";
+            min_words = 100;
+        } else if(countdown == 60) {
+            var timer_string = "1:00";
+            min_words = 200;
+        } else if(countdown == 120) {
+            var timer_string = "2:00";
+            min_words = 400;
+        } else if(countdown == 300) {
+            var timer_string = "5:00";
+            min_words = 1000;
+        } else if(countdown == 600) {
+            var timer_string = "10:00";
+            min_words = 2000;
+        }
+
+        $("#timer").text(timer_string);
+
+        $("#ajax-load").css('display', 'block');
+        $("#reload-box").css('display', 'none');
+        $("#row1").css('top', "1px");
+        $("#timer").removeClass("off");
+
+        window.clearInterval(setval);
+        setval = "";
+
+        $("#ajax-load").css('display', 'none');
+        $("#reload-box").css('display', 'block');
+
+        word_string = $('#wordlist').text();
+        words = word_string.split("|");
+
+        //auto-detect input method, use ENTER for chinese & japanese
+        if($('#wordlist').text().match(/[\u3400-\u9FBF]/))
+            input_key_value = 13;
+
+        if ( $('input[name="randomize"]').is(':checked') || param_rand == 1)
+            words = shuffleArray(words);
+
+        //repeat wordlist till at least 50 words
+        repeat_increase_wordlist();
+
+        word_string = words.join(" ");
+        words = word_string.split(" ");
+        console.log(words);
+
+        fill_line_switcher();
+
+        //initialisiere wichtige Startwerte die abhÃ¤ngig von der TextgrÃ¶ÃŸe ist
+        p = $('#row1 span[wordnr="'+word_pointer+'"]').position();
+
+        previous_position_top = 0;
+
+        line_height = parseInt($('#row1 span[wordnr="'+word_pointer+'"]').css('line-height'));
+
+        $inputfield.val('');
+        //$inputfield.focus();
+
+        $("#row1").show();
+        $("#words").fadeTo('fast', 1.0);
+
+        loading = 0;
+    }
+
+    function repeat_increase_wordlist() {
+        while(words.length < min_words) {
+            words = words.concat(words);
+        }
+    }
+
+    //wartet auf Eingaben die im #inputfield erfolgen
+    function activate_keylistener() {
+        var android_spacebar = 0;
+
+        // Android/mobile specific function to check if inputfield contains a space-char, as the keyup function doesn't work on Android+Chrome
+        $(window).on("touchstart", function(event) {
+            $("input#inputfield").on("input", function( event ) {
+                var value = $("input#inputfield").val();
+
+                if (value.indexOf(" ") != -1) {
+                    android_spacebar = 1;
+                } else {
+                    android_spacebar = 0;
+                }
+            });
+        });
+
+        $inputfield.keyup(function(event) {
+            if ( loading == 0 && event.which != 116) {
+                start_countdown();
+            }
+
+            $reloadBtn.show();
+
+            $row1_span_wordnr = $('#row1 span[wordnr="'+word_pointer+'"]');
+
+            if(event.which == 8)
+            {
+                backspace_counter++;
+            }
+
+            if(event.which == input_key_value && $inputfield.val() == ' ')
+            {
+                $inputfield.val('');
+            }
+            else if (event.which == input_key_value && loading == 0 || android_spacebar == 1) { //event.which == 32 => SPACE-Taste
+
+                //evaluate
+                var eingabe = $inputfield.val().split(" ");
+                user_input_stream += eingabe[0]+" ";
+
+                $row1_span_wordnr.removeClass('highlight-wrong');
+
+                if(eingabe[0] == words[word_pointer])
+                {
+                    $row1_span_wordnr.removeClass('highlight').addClass('correct');
+                    result_correct++;
+                    result_keystrokes_correct += words[word_pointer].length;
+                    result_keystrokes_correct++; //für jedes SPACE
+                }
+                else
+                {
+                    $row1_span_wordnr.removeClass('highlight').addClass('wrong');
+                    result_wrong++;
+                    result_keystrokes_wrong += words[word_pointer].length;
+                }
+
+                //process
+                word_pointer++;
+                $row1_span_wordnr = $('#row1 span[wordnr="'+word_pointer+'"]');
+
+                $row1_span_wordnr.addClass('highlight');
+
+                p = $row1_span_wordnr.position();
+
+                if(p.top > previous_position_top + 10) //"+ 5 ist die Toleranz, damit der Zeilensprung auch funktioniert, wenn User die Schriftart grÃ¶ÃŸer gestellt hat, etc."
+                {
+                    row_counter++;
+                    previous_position_top = p.top;
+
+                    var zeilensprung_hoehe = (-1 * line_height) * row_counter;
+                    $row1.css('top', zeilensprung_hoehe+"px"); //bei einem zeilensprung wird der text um "line_height" verschoben
+                    $row1_span_wordnr.addClass('highlight');
+                }
+
+                //erase
+                $("#inputstream").text(user_input_stream);
+                $inputfield.val(eingabe[1]);
+            } else {
+                //prÃ¼fe ob user das wort gerade falsch schreibt (dann zeige es rot an, damit user direkt korrigieren kann)
+                if($inputfield.val().replace(/\s/g, '') == words[word_pointer].substr(0, $inputfield.val().length))
+                    $row1_span_wordnr.removeClass('highlight-wrong').addClass('highlight');
+                else
+                    $row1_span_wordnr.removeClass('highlight').addClass('highlight-wrong');
+            }
+
+        });
+    }
+
+    //zÃ¤hlt die Zeit runter und stoppt den Speedtest
+    function start_countdown() {
+        if(cd_started == 0)
+        {
+            cd_started = 1;
+            setval = window.setInterval(count_down, 1000);
+        }
+    }
+
+    //zÃ¤hlt die Zeit runter
+    function count_down() {
+        countdown--;
+
+        var first_part;
+        var second_part;
+
+        first_part = Math.floor(countdown / 60);
+        second_part = countdown % 60;
+
+        //if(second_part < 10)
+        //	second_part = '0'+second_part;
+
+        if(second_part < 10)
+            second_part = "0"+second_part;
+
+        if(countdown > 0)
+        {
+            $("#timer").text(first_part+":"+second_part);
+        } else {
+            $("#timer").text("0:00");
+            $("#timer").addClass("off");
+            $("#row1").hide();
+            $("#words").fadeOut();
+
+            window.clearInterval(setval);
+            setval = "";
+
+            //var send_data = "&wordlist="+$("#wordlist").text()+"&user_input="+user_input_stream+"&backspace_counter="+backspace_counter+"&speedtest_id="+$("#speedtest-id").attr("value")+"&mode="+$("#speedtest_mode").attr("value");
+
+            //wordlist
+            //user_input
+            //backspace_counter
+            //speedtest_id
+
+            $("#result-load-indicator").show();
+
+            auswertung();
+        }
+    }
+
+    function auswertung() {
+        wpm_calc = Math.round(result_keystrokes_correct / 5);
+
+        $("#result-table #wpm strong").text(Math.round(wpm_calc/ (param_duration / 60)) + " WPM");
+        $("#result-table #keystrokes span.correct").text(result_keystrokes_correct);
+        $("#result-table #keystrokes span.wrong").text(result_keystrokes_wrong);
+        $("#result-table #keystrokes span.all").text(result_keystrokes_correct + result_keystrokes_wrong);
+        $("#result-table #correct td.value").text(result_correct);
+        $("#result-table #wrong td.value").text(result_wrong);
+
+        $("#auswertung-result").fadeIn();
+    }
+
+
+    //String "Trim" Function
+    function trim11 (str) {
+        str = str.replace(/^\s+/, '');
+        for (var i = str.length - 1; i >= 0; i--) {
+            if (/\S/.test(str.charAt(i))) {
+                str = str.substring(0, i + 1);
+                break;
+            }
+        }
+        return str;
+    }
+
+    //befÃ¼llt #row1 und #row2 mit neuen WÃ¶rtern
+    function fill_line_switcher() {
+        for(i=0; i < words.length; i++)
+            row1_string += '<span wordnr="'+i+'" class="">'+words[i].replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;')+'</span> '; //classes = NONE, green, red, highlight
+
+            //row1_string += '<span wordnr="'+i+'" class="">'+words[i]+'</span> '; //classes = NONE, green, red, highlight
+
+        $("#row1").html(row1_string);
+
+        $("#row1 span:first").addClass('highlight');
+    }
+
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        return array;
+    }
+
+    function GetURLParameter(sParam)
+    {
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++)
+        {
+            var sParameterName = sURLVariables[i].split('=');
+            if (sParameterName[0] == sParam)
+            {
+                return sParameterName[1];
+            }
+        }
+    }
+
+</script>
+
+	
+
+</div>
+		</div>
+	</div>
+</div>
+	<div id="main-content-trenner"></div>
+<div id="content-bg">
+	</div>  
+	<div id="footer-bg">
+	<center><div class="container-modified">
+		<div class="row">
+	    	<div class="col-sm-4">
+	    		<h3>About</h3>
+					Modified By Tushar
+	    	</div></center>
+	    </div>
+   </div>
+</div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<!-- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+	<!--<script type="text/javascript" src="./js/globalfunctions.min.js"></script>-->
+		<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function () {
+		$(function() {
+			
+			setInterval(function() {
+				var count = $("#activity-module div.list-group-item").size();
+				//console.log(count);
+				if(count > 5)
+					$("#activity-module #children div.list-group-item:last").hide().remove();
+				
+			}, 350000);
+		});
+	});
+//]]>
+</script>
+</body>
+</html>
