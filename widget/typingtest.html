@@ -532,7 +532,7 @@
         });
     }
 
-    //zÃ¤hlt die Zeit runter und stoppt den Speedtest
+    //Countdown timer
     function start_countdown() {
         if(cd_started == 0)
         {
@@ -568,13 +568,6 @@
 
             window.clearInterval(setval);
             setval = "";
-
-            //var send_data = "&wordlist="+$("#wordlist").text()+"&user_input="+user_input_stream+"&backspace_counter="+backspace_counter+"&speedtest_id="+$("#speedtest-id").attr("value")+"&mode="+$("#speedtest_mode").attr("value");
-
-            //wordlist
-            //user_input
-            //backspace_counter
-            //speedtest_id
 
             $("#result-load-indicator").show();
 
@@ -645,9 +638,6 @@
     }
 
 </script>
-
-	
-
 </div>
 		</div>
 	</div>
