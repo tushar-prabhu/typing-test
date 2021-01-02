@@ -19,7 +19,7 @@
 
 	<div class="container-modified">
 		<nav id="navbar-top-first" class="navbar navbar-default" role="navigation">
-        <h2><center><font color="#ffffff">IT Forum Blind typing Competition</font></center></h2>
+        <h1><center><font color="#ffffff">IT Forum Blind Typing Competition</font></center></h1>
 		</nav>
 	</div>
 
@@ -31,8 +31,8 @@
 	<div class="col-sm-8 col-md-8 col-lg-8">
 
 		<div id="settings-container">
-			<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" id="settings-link" style="margin-bottom: 10px;">
-				<span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Open Settings
+			<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" id="settings-link" style="margin-bottom: 10px;background-color: #4d4646;color:#ffffff;padding:20px;font-size: large;cursor: pointer;">
+				<span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Click to add custom paragraph
 			</button>
 
 			<div id="settings">
@@ -47,14 +47,14 @@
 					</select>
 				</p>-->
 
-				<strong>Enter your custom sentence/paragraph here.</strong> <small>(if you want to randomize the words, separate each word or phrase with a "|")</small>
+				<strong style="color:#ffffff;">Enter your custom sentence/paragraph here.</style></strong> <!--<small>(if you want to randomize the words, separate each word or phrase with a "|")</small>-->
 				<textarea></textarea>
 
-				<label><input type="checkbox" name="randomize" value="randomize" checked> Randomize</label>
+				<!--<label><input type="checkbox" name="randomize" value="randomize" checked> Randomize</label>-->
 
 				<br />
 				<br />
-				<p><button id="apply-settings">Apply Settings</button></p>
+				<p><button id="apply-settings" style="background-color:#4d4646;color:#ffffff;padding: 10px;font-size: medium;cursor: pointer;">Save paragraph</button></p>
 			</div>
 		</div>
 
@@ -106,7 +106,7 @@
     }
     #input-row {
         padding:4px;
-        background:#a7c8e7;
+        background:#4d4646;
         -webkit-border-radius:4px;
         border-radius:4px;
     }
@@ -135,11 +135,11 @@
     #reload-btn button {
         width: 50px; height:50px;
         background: #161C20;
-        background-image: -webkit-linear-gradient(top, #161C20, #2980b9);
-        background-image: -moz-linear-gradient(top, #161C20, #2980b9);
-        background-image: -ms-linear-gradient(top, #161C20, #2980b9);
-        background-image: -o-linear-gradient(top, #161C20, #2980b9);
-        background-image: linear-gradient(to bottom, #161C20, #2980b9);
+        background-image: -webkit-linear-gradient(top, #000000, #4d4646);
+        background-image: -moz-linear-gradient(top,#000000, #4d4646);
+        background-image: -ms-linear-gradient(top,#000000, #4d4646);
+        background-image: -o-linear-gradient(top,#000000, #4d4646);
+        background-image: linear-gradient(to bottom,#000000, #4d4646);
         border-color: #2980b9;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
@@ -171,7 +171,7 @@
         padding: 20px;
         margin-bottom: 10px;
         border-radius: 5px;
-        background: white;
+        background: #4f4646;
     }
     #settings textarea {width: 100%; min-height: 20px;}
 
@@ -180,22 +180,22 @@
 
 
 
-    #auswertung-result {font-family: arial;padding:0;display:none;width:280px;float:left;margin: 20px; margin-left:0px;background:#fff;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-webkit-box-shadow:1px 1px 1px 1px rgba(154,190,227,0.9);-moz-box-shadow:1px 1px 1px 1px rgba(154,190,227,0.9);box-shadow:1px 1px 1px 1px rgba(154,190,227,0.9)}
-    #auswertung-result h3{color:#fff;background:#4d7f9f;font-size:16px;padding:8px 15px;margin:0;font-weight:bold;text-shadow:1px 1px 1px #333;filter:dropshadow(color=#333333,offx=1,offy=1);-moz-border-radius-topleft:3px;-moz-border-radius-topright:3px;-moz-border-radius-bottomright:0;-moz-border-radius-bottomleft:0;-webkit-border-radius:3px 3px 0 0;border-radius:3px 3px 0 0;background:#5e91b3;background:-moz-linear-gradient(top,#5e91b3 0,#407191 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#5e91b3),color-stop(100%,#407191));background:-webkit-linear-gradient(top,#5e91b3 0,#407191 100%);background:-o-linear-gradient(top,#5e91b3 0,#407191 100%);background:-ms-linear-gradient(top,#5e91b3 0,#407191 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5e91b3',endColorstr='#407191',GradientType=0);background:linear-gradient(top,#5e91b3 0,#407191 100%)}
+    #auswertung-result {font-family: arial;padding:0;display:none;width:280px;float:left;margin: 20px; margin-left:0px;background:#fff;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-webkit-box-shadow:1px 1px 1px 1px rgba(79,70,70, 0.8);-moz-box-shadow:1px 1px 1px 1px rgba(154,190,227,0.9);box-shadow:1px 1px 1px 1px rgba(154,190,227,0.9)}
+    #auswertung-result h3{color:#fff;background:#4f4646;font-size:16px;padding:8px 15px;margin:0;font-weight:bold;text-shadow:1px 1px 1px #333;filter:dropshadow(color=#333333,offx=1,offy=1);-moz-border-radius-topleft:3px;-moz-border-radius-topright:3px;-moz-border-radius-bottomright:0;-moz-border-radius-bottomleft:0;-webkit-border-radius:3px 3px 0 0;border-radius:3px 3px 0 0;background:#4f4646;background:-moz-linear-gradient(top,#4f4646 0,#4f4646 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#4f4646),color-stop(100%,#4f4646));background:-webkit-linear-gradient(top,#4f4646 0,#4f4646 100%);background:-o-linear-gradient(top,#4f4646 0,#4f4646 100%);background:-ms-linear-gradient(top,#4f4646 0,#4f4646 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4f4646',endColorstr='#4f4646',GradientType=0);background:linear-gradient(top,#4f4646 0,#4f4646 100%)}
     #auswertung-result #result-table td {padding: 8px; line-height: 1.428571429; vertical-align: top; border-top: 1px solid #ddd;}
-    #auswertung-result #result-table tr:first-child td {border:none;}
-    #auswertung-result #result-table td:first-child  {width:120px;}
-    #auswertung-result #result-table td:nth-child(2)  {width:120px;}
+    #auswertung-result #result-table tr:first-child td {border:none;background-color: #4f4646;}
+    #auswertung-result #result-table td:first-child  {width:120px;background-color: #4f4646;}
+    #auswertung-result #result-table td:nth-child(2)  {width:120px;background-color: #4f4646;}
     #auswertung-result #result-table td#wpm{text-align:center}
-    #auswertung-result #result-table td#wpm strong{font-size:46px;color:#527a1e;display:block;margin-bottom:-9px;padding: 5px;}
-    #auswertung-result #result-table td#wpm small{color:#81888c;font-size:12px}
-    #auswertung-result #result-table tr#keystrokes small{font-size:12px;margin-right:5px;position:relative;top:-2px}
-    #auswertung-result #result-table tr#correct .value{color:green}
-    #auswertung-result #result-table tr#wrong .value{color:red}
-    #auswertung-result #result-table td.name{font-size:16px;padding-left:20px;width:160px}
-    #auswertung-result #result-table td.value{font-size:16px;text-align:right;padding-right:20px}
+    #auswertung-result #result-table td#wpm strong{font-size:46px;color:#ffffff;display:block;margin-bottom:-9px;padding: 5px;background-color: #4f4646;}
+    #auswertung-result #result-table td#wpm small{color:#ffffff;font-size:12px}
+    #auswertung-result #result-table tr#keystrokes small{font-size:12px;color:#ffffff;margin-right:5px;position:relative;top:-2px;background-color: #4f4646;}
+    #auswertung-result #result-table tr#correct .value{color:rgb(0, 255, 0);background-color: #4f4646;}
+    #auswertung-result #result-table tr#wrong .value{color:rgb(255, 0, 0);background-color: #4f4646;}
+    #auswertung-result #result-table td.name{font-size:16px;padding-left:20px;width:160px;color: #ffffff;}
+    #auswertung-result #result-table td.value{font-size:16px;text-align:right;padding-right:20px;color: #ffffff;}
     #auswertung-result p{font-size:1.4em;margin-top:20px;text-align:center}
-    #auswertung-share h3{color:#fff;background:#4d7f9f;font-size:16px;padding:8px 15px;font-weight:bold;text-shadow:1px 1px 1px #333;filter:dropshadow(color=#333333,offx=1,offy=1);-moz-border-radius-topleft:3px;-moz-border-radius-topright:3px;-moz-border-radius-bottomright:0;-moz-border-radius-bottomleft:0;-webkit-border-radius:3px 3px 0 0;border-radius:3px 3px 0 0;background:#5e91b3;background:-moz-linear-gradient(top,#5e91b3 0,#407191 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#5e91b3),color-stop(100%,#407191));background:-webkit-linear-gradient(top,#5e91b3 0,#407191 100%);background:-o-linear-gradient(top,#5e91b3 0,#407191 100%);background:-ms-linear-gradient(top,#5e91b3 0,#407191
+    #auswertung-share h3{color:#fff;background:#4f4646;font-size:16px;padding:8px 15px;font-weight:bold;text-shadow:1px 1px 1px #333;filter:dropshadow(color=#333333,offx=1,offy=1);-moz-border-radius-topleft:3px;-moz-border-radius-topright:3px;-moz-border-radius-bottomright:0;-moz-border-radius-bottomleft:0;-webkit-border-radius:3px 3px 0 0;border-radius:3px 3px 0 0;background:#4f4646;background:-moz-linear-gradient(top,#4f4646 0,#4f4646 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#4f4646),color-stop(100%,#4f4646));background:-webkit-linear-gradient(top,#4f4646 0,#4f4646 100%);background:-o-linear-gradient(top,#4f4646 0,#4f4646 100%);background:-ms-linear-gradient(top,#4f4646 0,#4f4646);
 
 </style>
 
@@ -208,7 +208,7 @@
     <div id="input-row">
         <div style="margin-right: 137px;"><input type="text" class="form-control" id="inputfield" value="" dir="ltr" placeholder="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div>
         <div style="float:right; width: 130px; height:50px; overflow:hidden;">
-            <div id="timer" title="click to show/hide countdown">0:30</div>
+            <div id="timer" title="click to show/hide countdown">1:00</div>
             <div style="width: 50px; float: left;" id="reload-btn"><button>↻</button></div>
         </div>
         <div style="clear:both;"></div>
@@ -243,7 +243,7 @@
     var $reloadBtn = $("#reload-btn");
     var $row1_span_wordnr;
 
-    var param_duration = 30; //default 1 minute/ 60 seconds
+    var param_duration = 60; //default 1 minute/ 60 seconds
     var param_rand = 1; //randomization active
     var param_words = ''; //words picked by the user
 
@@ -306,7 +306,7 @@
 
         //check if duration exists and is integer value
         if (typeof param_duration === 'undefined')
-            param_duration = 30;
+            param_duration = 60;
 
         if (typeof param_rand === 'undefined')
             param_rand = 1;
@@ -646,7 +646,7 @@
 	<div id="footer-bg">
 	<center><div class="container-modified">
 	    		<h3><b><u>About</u></b></h3>
-					Created with &#128151; By Tushar
+					Designed with &#128151; By Tushar
    </div></center>
 </div>
     <!-- Le javascript
