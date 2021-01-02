@@ -208,7 +208,7 @@
     <div id="input-row">
         <div style="margin-right: 137px;"><input type="text" class="form-control" id="inputfield" value="" dir="ltr" placeholder="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div>
         <div style="float:right; width: 130px; height:50px; overflow:hidden;">
-            <div id="timer" title="click to show/hide countdown">1:00</div>
+            <div id="timer" title="click to show/hide countdown">0:30</div>
             <div style="width: 50px; float: left;" id="reload-btn"><button>↻</button></div>
         </div>
         <div style="clear:both;"></div>
@@ -235,15 +235,15 @@
 
 <script type="text/javascript">
 
-    var keys = {};					//liest die gedrückten Tasten ein, wird genutzt für Mac/Safari "Smart" Reload
-    var setval = "";				//die Variable fÃ¼r den Timer/setInterval
+    var keys = {};					
+    var setval = "";				
     var input_key_value = 32;
     var $inputfield = $("input#inputfield");
     var $row1 = $("#row1");
     var $reloadBtn = $("#reload-btn");
     var $row1_span_wordnr;
 
-    var param_duration = 60; //default 1 minute/ 60 seconds
+    var param_duration = 30; //default 1 minute/ 60 seconds
     var param_rand = 1; //randomization active
     var param_words = ''; //words picked by the user
 
@@ -306,7 +306,7 @@
 
         //check if duration exists and is integer value
         if (typeof param_duration === 'undefined')
-            param_duration = 60;
+            param_duration = 30;
 
         if (typeof param_rand === 'undefined')
             param_rand = 1;
@@ -646,7 +646,7 @@
 	<div id="footer-bg">
 	<center><div class="container-modified">
 	    		<h3><b><u>About</u></b></h3>
-					Modified By Tushar
+					Created with &#128151; By Tushar
    </div></center>
 </div>
     <!-- Le javascript
