@@ -324,8 +324,7 @@
         // clean the input to prevent xss
         $('#wordlist').html($("#settings textarea").val().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'));
 
-        //adjust URL parameters
-        history.replaceState(null, null, 'https://10fastfingers.com/widget/typingtest?dur=' + $("select#settings-duration option:selected").val() + '&rand=' + $("input[type='checkbox']:checked").length + '&words='+$("#settings textarea").val());
+        //adjust URL parameters 
 
         read_url_data();
 
@@ -347,8 +346,6 @@
 
     function restart()
     {
-        //wird beim start und beim klick auf "restart" aufgerufen
-        //ruft initialisierungsfunktionen auf und setzt werte zurÃ¼ck auf den startwert
         word_string = '';
         words = '';
         row1_string = '';
@@ -420,7 +417,6 @@
 
         fill_line_switcher();
 
-        //initialisiere wichtige Startwerte die abhÃ¤ngig von der TextgrÃ¶ÃŸe ist
         p = $('#row1 span[wordnr="'+word_pointer+'"]').position();
 
         previous_position_top = 0;
@@ -521,7 +517,6 @@
                 $("#inputstream").text(user_input_stream);
                 $inputfield.val(eingabe[1]);
             } else {
-                //prÃ¼fe ob user das wort gerade falsch schreibt (dann zeige es rot an, damit user direkt korrigieren kann)
                 if($inputfield.val().replace(/\s/g, '') == words[word_pointer].substr(0, $inputfield.val().length))
                     $row1_span_wordnr.removeClass('highlight-wrong').addClass('highlight');
                 else
