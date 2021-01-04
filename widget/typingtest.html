@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css" media="screen, projection">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
 	
     
 </head>
@@ -25,7 +25,6 @@
 
 </div>	
 	<br />
-
 <div class="container-modified">	
 <div class="row main-layout">
 	<div class="col-sm-8 col-md-8 col-lg-8">
@@ -208,7 +207,7 @@
     <div id="input-row">
         <div style="margin-right: 137px;"><input type="text" class="form-control" id="inputfield" value="" dir="ltr" placeholder="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div>
         <div style="float:right; width: 130px; height:50px; overflow:hidden;">
-            <div id="timer" title="click to show/hide countdown">1:00</div>
+            <div id="timer" title="click to show/hide countdown">2:00</div>
             <div style="width: 50px; float: left;" id="reload-btn"><button>⟳</button></div>
         </div>
         <div style="clear:both;"></div>
@@ -234,7 +233,7 @@
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-
+    var namey=prompt("Please Enter your name", "");
     var keys = {};					
     var setval = "";				
     var input_key_value = 32;
@@ -306,7 +305,7 @@
 
         //check if duration exists and is integer value
         if (typeof param_duration === 'undefined')
-            param_duration = 60;
+            param_duration = 120;
 
         if (typeof param_rand === 'undefined')
             param_rand = 1;
@@ -582,9 +581,8 @@
         $("#result-table #keystrokes span.correct").text(result_keystrokes_correct);
         $("#result-table #keystrokes span.wrong").text(result_keystrokes_wrong);
         $("#result-table #keystrokes span.all").text(result_keystrokes_correct + result_keystrokes_wrong);
-        $("#result-table #correct td.value").text(result_correct);
+        $("#result-table #correct td.value").text(namey + " " + result_correct);
         $("#result-table #wrong td.value").text(result_wrong);
-
         $("#auswertung-result").fadeIn();
     }
 
@@ -601,7 +599,6 @@
         return str;
     }
 
-    //befÃ¼llt #row1 und #row2 mit neuen WÃ¶rtern
     function fill_line_switcher() {
         for(i=0; i < words.length; i++)
             row1_string += '<span wordnr="'+i+'" class="">'+words[i].replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;')+'</span> '; //classes = NONE, green, red, highlight
@@ -652,7 +649,6 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-	<!-- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
     <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
