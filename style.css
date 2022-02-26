@@ -1,0 +1,274 @@
+      body {
+          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         overflow: hidden;
+          padding: 0%;
+          margin: 0%;
+          box-sizing: border-box;
+      }
+
+      #snow {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          pointer-events: none;
+          z-index: 1000;
+      }
+      
+      .gradient-text {
+          font-family: 'Russo one';
+          background-image: radial-gradient(circle,#ffffff, #305ee8);
+          background-size: 100%;
+          background-repeat: repeat;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+      }
+
+      .nm {
+          font-family:'Trebuchet MS',
+          'Lucida Sans Unicode',
+          'Lucida Grande',
+          'Lucida Sans',
+          Arial,
+          sans-serif;
+          font-style: italic;
+      }
+
+      .navbar {
+          width: 100%;
+          height: 10vh;
+          position: fixed;
+          display: flex;
+          background-color: #1f2a31;
+          color: #ffffff;
+          align-items: center;
+          justify-content: center;
+          top: 0px;
+      }
+
+      .header {
+          font-size: 40px;
+          font-weight: bolder;
+      }
+
+      .logo {
+          color: #f0de9d;
+      }
+      canvas{
+          background-image: url(/assets/ignitra_logo_back.png);
+          opacity: rgba(255, 255, 255, 0.164);
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 100%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+      }
+      .container {
+          background-image: url(/assets/ignitra_logo_back.png);
+          /*background-image: url(/assets/ignitra_logo1.jpeg);*/
+          background-repeat: no-repeat;
+          background-size: cover;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+      }
+
+      .test-container {
+          position: absolute;
+          top: 0%;
+          left: 20%;
+          width: 900px;
+       
+      }
+
+      .timer {
+          width: 100%;
+          height: 7px;
+          background-color: #02f768;
+          top: 0;
+          left: 0;
+          transition: 0.2s;
+      }
+
+      .output {
+          font-size: 25px;
+          position: relative;
+          font-weight: bold;
+          color: #fff;
+          width: 100%;
+          margin: auto;
+          height: 24px;
+          overflow: hidden;
+          margin-top: 90px;
+          line-height: 25px;
+          padding: 10px 0;
+          background-color: rgba(174, 0, 255, 0.8);
+          border-radius: 5px;
+      }
+
+      .word {
+          margin-bottom: 5px;
+      }
+
+      .mobile-only {
+          display: none;
+      }
+
+      .word,
+      .word-letter {
+          position: relative;
+          transition: 0.2s;
+      }
+
+      .word-letter-anim::before {
+          position: absolute;
+          content: "";
+          background-color: rgba(0, 0, 0, 0.705);
+          width: 100%;
+          height: 0;
+          left: 0;
+          bottom: 0;
+          animation: grow 0.2s 1;
+      }
+
+      @keyframes grow {
+          0% {}
+
+          100% {
+              height: 100%;
+          }
+      }
+
+      .word-input {
+          display: flex;
+          color: #ffffff;
+          border: 1px solid #1b1e21;
+      }
+
+      /*.refresh {
+          outline: none;
+          border: none;
+          background-color: #e78607;
+          font-size: 20px;
+          color: #fff;
+          padding: 5px;
+          cursor: pointer;
+          flex: 1;
+          display: none;
+          transition: 0.2s;
+      }*/
+
+      .word-line {
+          padding-bottom: 8px;
+
+          word-wrap: normal;
+      }
+
+      .type-word {
+          flex: 15;
+          width: calc(100% - 70px);
+          border: none;
+          padding: 5px;
+          outline: none;
+          background-color: #73777ac4;
+          backdrop-filter: blur(4px);
+          font-size: 25px;
+          font-weight: bold;
+          color: #ffffff;
+      }
+
+      .count-down {
+          flex: 1;
+          text-align: center;
+          line-height: 50px;
+          vertical-align: middle;
+          background-color: #3033369d;
+          backdrop-filter: blue;
+          font-size: 24px;
+          font-weight: bolder;
+          color: #fff;
+      }
+
+      .result {
+          color: #fff;
+          font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .fixed-bottom {
+          font-family: Arial, Helvetica, sans-serif;
+          height: 11vh;
+          display: flex;
+          position: relative;
+          align-items: center;
+          justify-content: center;
+          color: aliceblue;
+          background-color: #11122b;
+      }
+
+      .a-text{
+          font-weight: bold;
+          font-size: 20px;
+          text-decoration: none;
+          background-color: red;
+          background-image: linear-gradient(175deg, #2819ff, #00ddfa);
+          background-size: 100%;
+          background-repeat: repeat;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+      }
+
+      .apology {
+          font-size: 35px;
+          color: #e78607;
+          font-weight: bolder;
+      }
+
+      @media only screen and (max-width: 768px) {
+
+          /*.test-container {
+           width:90%;
+           margin: 25vh auto;
+       }
+       .output {
+           font-size: 14px;
+           word-wrap:normal;
+           height:100px;
+           margin: auto;
+           
+       }
+       .word-line {
+           word-wrap: normal;
+       }*/
+          .container {
+              display: none;
+          }
+
+          body {
+              background-image: url(./assets/ignitra_logo.jpeg);
+              background-repeat: no-repeat;
+              background-size: cover;
+              backdrop-filter: blur(4px);
+          }
+
+          .mobile-only {
+              display: grid;
+              align-items: center;
+              font-family: 'Courier New', Courier, monospace;
+              margin: auto;
+              color: aliceblue;
+              height: 90vh;
+          }
+
+          .fixed-bottom {
+              margin-bottom: 0px;
+              height: 10vh;
+          }
+      }

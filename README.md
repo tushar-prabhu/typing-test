@@ -1,2 +1,6 @@
-This github page was created for the inter-forum blind typing competition held at Alva's College, Moodbidri.
-# typing-test
+# <a href="https://tushar-prabhu/typing-test">Check Now!!</a>
+
+## IGNITRA 2K22
+<hr>
+
+### Alva's College, Moodbidri
