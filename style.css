@@ -1,6 +1,6 @@
       body {
-          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-         overflow: hidden;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          overflow: hidden;
           padding: 0%;
           margin: 0%;
           box-sizing: border-box;
@@ -15,10 +15,10 @@
           pointer-events: none;
           z-index: 1000;
       }
-      
+
       .gradient-text {
           font-family: 'Russo one';
-          background-image: radial-gradient(circle,#ffffff, #305ee8);
+          background-image: radial-gradient(circle, #ffffff, #305ee8);
           background-size: 100%;
           background-repeat: repeat;
           background-clip: text;
@@ -29,12 +29,12 @@
       }
 
       .nm {
-          font-family:'Trebuchet MS',
-          'Lucida Sans Unicode',
-          'Lucida Grande',
-          'Lucida Sans',
-          Arial,
-          sans-serif;
+          font-family: 'Trebuchet MS',
+              'Lucida Sans Unicode',
+              'Lucida Grande',
+              'Lucida Sans',
+              Arial,
+              sans-serif;
           font-style: italic;
       }
 
@@ -58,16 +58,18 @@
       .logo {
           color: #f0de9d;
       }
-      canvas{
-          background-image: url(./assets/ignitra_logo_back.png);
+
+      canvas {
+          background-image: url(/assets/ignitra_logo_back1.svg);
           opacity: rgba(255, 255, 255, 0.164);
           background-repeat: no-repeat;
           background-size: cover;
           width: 100%;
-            display: flex;
-            align-content: center;
-            justify-content: center;
+          display: flex;
+          align-content: center;
+          justify-content: center;
       }
+
       .container {
           background-image: url(/assets/ignitra_logo_back.png);
           /*background-image: url(/assets/ignitra_logo1.jpeg);*/
@@ -83,7 +85,7 @@
           top: 0%;
           left: 20%;
           width: 900px;
-       
+
       }
 
       .timer {
@@ -175,7 +177,7 @@
           border: none;
           padding: 5px;
           outline: none;
-          background-color: #73777ac4;
+          background-color: #73777a98;
           backdrop-filter: blur(4px);
           font-size: 25px;
           font-weight: bold;
@@ -210,7 +212,7 @@
           background-color: #11122b;
       }
 
-      .a-text{
+      .a-text {
           font-weight: bold;
           font-size: 20px;
           text-decoration: none;
