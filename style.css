@@ -4,6 +4,7 @@
           padding: 0%;
           margin: 0%;
           box-sizing: border-box;
+          background-color: #000000;
       }
 
       #snow {
@@ -43,7 +44,7 @@
           height: 10vh;
           position: fixed;
           display: flex;
-          background-color: #1f2a31;
+          background-color: transparent;
           color: #ffffff;
           align-items: center;
           justify-content: center;
@@ -60,7 +61,7 @@
       }
 
       canvas {
-          background-image: url(./assets/ignitra_logo_back1.svg);
+          background-image: url(./assets/ignitra_logo_back.png);
           opacity: rgba(255, 255, 255, 0.164);
           background-repeat: no-repeat;
           background-size: cover;
@@ -82,7 +83,9 @@
 
       .test-container {
           position: absolute;
-          top: 0%;
+          align-items: center;
+          justify-content: center;
+          top: 30%;
           left: 20%;
           width: 900px;
 
@@ -209,7 +212,7 @@
           align-items: center;
           justify-content: center;
           color: aliceblue;
-          background-color: #11122b;
+          background-color: #000000;
       }
 
       .a-text {
@@ -250,6 +253,10 @@
            word-wrap: normal;
        }*/
           .container {
+              display: none;
+          }
+
+          canvas {
               display: none;
           }
 
