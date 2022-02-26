@@ -59,7 +59,7 @@
           color: #f0de9d;
       }
       canvas{
-          background-image: url(/assets/ignitra_logo_back.png);
+          background-image: url(./assets/ignitra_logo_back.png);
           opacity: rgba(255, 255, 255, 0.164);
           background-repeat: no-repeat;
           background-size: cover;
