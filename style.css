@@ -60,7 +60,7 @@
       }
 
       canvas {
-          background-image: url(/assets/ignitra_logo_back1.svg);
+          background-image: url(./assets/ignitra_logo_back1.svg);
           opacity: rgba(255, 255, 255, 0.164);
           background-repeat: no-repeat;
           background-size: cover;
