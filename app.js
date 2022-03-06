@@ -1,4 +1,5 @@
 var name1 = window.prompt("Enter your name: ");
+var branch1 = window.prompt("Enter your branch");
 document.getElementById("mobile-apology").innerHTML = name1;
 var words = ['this', 'thing', 'sometimes', 'break', 'went', 'can\'t', 'been', 'question', 'quite', 'quit', 'from', 'form', 'forever', 'angry', 'limit', 'lucky', 'hours', 'records', 'oil', 'feed', 'won\'t', 'its', 'it\'s', 'old', 'many', 'place', 'time', 'experience', 'time', 'quest', 'just', 'computer', 'move', 'white', 'green', 'black', 'orange', 'different', 'hour', 'big', 'even', 'mountain', 'been', 'animal', 'long', 'after', 'page', 'tree', 'see', 'seen', 'right', 'left', 'has', 'went', 'above', 'said', 'good', 'long', 'it', 'why', 'that', 'learn', 'girl', 'boy', 'will', 'three', 'before', 'may', 'to', 'fine', 'flower', 'city', 'street'];
 
@@ -104,7 +105,7 @@ function reset_test(e) {
     input.value = '';
     input.focus();
     error_list.innerHTML = '';
-    counter.textContent = '60';
+    counter.textContent = '120'; //time- **
     var key_pressed = document.onkeydown = init_counter;
     word_num = 0;
 }
@@ -307,7 +308,7 @@ function word_submit(target, e, letters, line, word_letters, word_inner, word, l
 }
 
 // start counter
-var timer_size = 100;
+var timer_size = 120;
 var key_pressed = document.onkeydown = init_counter;
 var timer_bar = document.querySelector('.timer');
 
@@ -315,14 +316,15 @@ function init_counter(e) {
     if (e.keyCode !== 32 || e.keyCode !== 9 || e.keyCode !== 17 || e.keyCode !== 18) {
         document.onkeydown = null;
 
-        var i = 60;
+        //time- **
+        var i = 120;
 
         var counter_start = setInterval(() => {
             i--;
 
-            timer_size--;
+            timer_size = timer_size - 1;
 
-            timer_size = timer_size - .67;
+            //timer_size = timer_size - 0.335;  //size .67
 
             if (timer_size <= 0) {
                 timer_bar.style.cssText = 'width: 0;';
@@ -334,17 +336,18 @@ function init_counter(e) {
                 clearInterval(counter_start);
                 alert("Time is up!!");
                 result.innerHTML =
-                    '<div style="display:flex;align-items:center;justify-content:center;">' + '<button style="height:20px;width:60px;border-radius:50px;" type="submit" value="submit">Submit</button>' + '</div>';
+                    //'<div style="display:flex;align-items:center;justify-content:center;">' + '<button style="height:20px;width:60px;border-radius:50px;" type="submit" value="submit">Submit</button>' + '</div>';
 
-                /* '<div style="display:flex;align-items:center;justify-content:center;backdrop-filter: blur(4px);width: 200 px;height: 40 vh; font-size:30px;color:#ffffff;font-weight:bolder;"><p>' +
-                 'Name: ' + name1 +'<br>'+
-                 'WPM:' + correct_wrds + '<br>' +
-                 'Mostly correct: ' + mostly_correct + '<br>' +
-                 'Fully correct: ' + fully_correct + '<br>' +
-                 'Correct letter flow: ' + letter_flow + '<br>' +
-                 'Incorrect: ' + incorrect_wrd + '<br>' +
-                 'Keystrokes: ' + letter_stroke +
-                 '</p></div>';*/
+                    '<div style="display:flex;align-items:center;justify-content:center;background-color:rgba(12, 12, 12, 0.493);backdrop-filter: blur(4px);width: 120%;height: 40 vh; font-size:30px;color:#ffffff;font-weight:bolder;"><p>' +
+                    'Name: ' + name1 + '<br>' +
+                    'Branch: ' + branch1 + '<br>' +
+                    'WPM:' + correct_wrds + '<br>' +
+                    'Mostly correct: ' + mostly_correct + '<br>' +
+                    'Fully correct: ' + fully_correct + '<br>' +
+                    'Correct letter flow: ' + letter_flow + '<br>' +
+                    'Incorrect: ' + incorrect_wrd + '<br>' +
+                    'Keystrokes: ' + letter_stroke +
+                    '</p></div>';
             }
 
             counter.textContent = i;
@@ -421,69 +424,3 @@ function init_counter(e) {
         window.addEventListener('blur', detectDevTool);
     }
 }();
-
-// snowfall animation
-document.addEventListener('DOMContentLoaded', function () {
-    var script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
-    script.onload = function () {
-        particlesJS("snow", {
-            "particles": {
-                "number": {
-                    "value": 200,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "opacity": {
-                    "value": 0.7,
-                    "random": false,
-                    "anim": {
-                        "enable": false
-                    }
-                },
-                "size": {
-                    "value": 5,
-                    "random": true,
-                    "anim": {
-                        "enable": false
-                    }
-                },
-                "line_linked": {
-                    "enable": false
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 5,
-                    "direction": "bottom",
-                    "random": true,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": true,
-                        "rotateX": 300,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "events": {
-                    "onhover": {
-                        "enable": false
-                    },
-                    "onclick": {
-                        "enable": false
-                    },
-                    "resize": false
-                }
-            },
-            "retina_detect": true
-        });
-    }
-    document.head.append(script);
-});

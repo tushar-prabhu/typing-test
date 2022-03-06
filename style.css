@@ -44,7 +44,7 @@
           height: 10vh;
           position: fixed;
           display: flex;
-          background-color: transparent;
+          background-color: black;
           color: #ffffff;
           align-items: center;
           justify-content: center;
@@ -61,10 +61,7 @@
       }
 
       canvas {
-          background-image: url(./assets/ignitra_logo_back.png);
-          opacity: rgba(255, 255, 255, 0.164);
-          background-repeat: no-repeat;
-          background-size: cover;
+
           width: 100%;
           display: flex;
           align-content: center;
@@ -72,31 +69,28 @@
       }
 
       .container {
-          background-image: url(/assets/ignitra_logo_back.png);
-          /*background-image: url(/assets/ignitra_logo1.jpeg);*/
-          background-repeat: no-repeat;
+          background-image: url(./assets/hero_background.png);
+          height: 90vh;
           background-size: cover;
-          display: flex;
-          align-content: center;
-          justify-content: center;
       }
 
       .test-container {
           position: absolute;
           align-items: center;
           justify-content: center;
-          top: 30%;
-          left: 20%;
+          top: 10%;
+          left: 15%;
           width: 900px;
 
       }
 
       .timer {
-          width: 100%;
           height: 7px;
           background-color: #02f768;
-          top: 0;
-          left: 0;
+          width: 120%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           transition: 0.2s;
       }
 
@@ -104,8 +98,8 @@
           font-size: 25px;
           position: relative;
           font-weight: bold;
-          color: #fff;
-          width: 100%;
+          color: #ffffff;
+          width: 120%;
           margin: auto;
           height: 24px;
           overflow: hidden;
@@ -151,6 +145,7 @@
 
       .word-input {
           display: flex;
+          width: 120%;
           color: #ffffff;
           border: 1px solid #1b1e21;
       }
@@ -280,4 +275,54 @@
               margin-bottom: 0px;
               height: 10vh;
           }
+      }
+
+
+      /* type animation*/
+
+      :root {
+          --hue: 223;
+          --bg: hsl(var(--hue), 90%, 15%);
+          --fg: hsl(var(--hue), 10%, 90%);
+      }
+
+      input {
+          color: var(--fg);
+      }
+
+      input {
+          background: transparent;
+          box-shadow: 0 -1px 0 hsla(var(--hue), 10%, 90%, 0.3) inset;
+          transition: box-shadow 0.15s linear;
+          -webkit-appearance: none;
+          appearance: none;
+      }
+
+      input:focus {
+          box-shadow: 0 -1px 0 hsl(var(--hue), 10%, 90%) inset;
+          outline: transparent;
+      }
+
+      input::placeholder {
+          color: hsla(var(--hue), 10%, 90%, 0.3);
+      }
+
+      .sr {
+          clip: rect(1px, 1px, 1px, 1px);
+          overflow: hidden;
+          position: absolute;
+          width: 1px;
+          height: 1px;
+      }
+
+      .particle {
+          border-radius: 50%;
+          pointer-events: none;
+          position: fixed;
+          width: 1.5ch;
+          height: 1.5ch;
+      }
+
+      .particle--ring {
+          box-shadow: 0 0 0 0.125em inset;
       }
