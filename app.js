@@ -334,7 +334,9 @@ function init_counter(e) {
 
             if (i <= 0) {
                 clearInterval(counter_start);
+                
                 alert("Time is up!!");
+                correct_wrds = Math.floor(correct_wrds / 2);
                 result.innerHTML =
                     //'<div style="display:flex;align-items:center;justify-content:center;">' + '<button style="height:20px;width:60px;border-radius:50px;" type="submit" value="submit">Submit</button>' + '</div>';
 
