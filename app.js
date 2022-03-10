@@ -1,5 +1,5 @@
 var name1 = window.prompt("Enter your name: ");
-var branch1 = window.prompt("Enter your branch");
+var branch1 = window.prompt("Enter your roll number");
 document.getElementById("mobile-apology").innerHTML = name1;
 var words = ['this', 'thing', 'sometimes', 'break', 'went', 'can\'t', 'been', 'question', 'quite', 'quit', 'from', 'form', 'forever', 'angry', 'limit', 'lucky', 'hours', 'records', 'oil', 'feed', 'won\'t', 'its', 'it\'s', 'old', 'many', 'place', 'time', 'experience', 'time', 'quest', 'just', 'computer', 'move', 'white', 'green', 'black', 'orange', 'different', 'hour', 'big', 'even', 'mountain', 'been', 'animal', 'long', 'after', 'page', 'tree', 'see', 'seen', 'right', 'left', 'has', 'went', 'above', 'said', 'good', 'long', 'it', 'why', 'that', 'learn', 'girl', 'boy', 'will', 'three', 'before', 'may', 'to', 'fine', 'flower', 'city', 'street'];
 
@@ -342,7 +342,7 @@ function init_counter(e) {
 
                     '<div style="display:flex;align-items:center;justify-content:center;background-color:rgba(12, 12, 12, 0.493);backdrop-filter: blur(4px);width: 120%;height: 40 vh; font-size:30px;color:#ffffff;font-weight:bolder;"><p>' +
                     'Name: ' + name1 + '<br>' +
-                    'Branch: ' + branch1 + '<br>' +
+                    'Roll No: ' + branch1 + '<br>' +
                     'WPM:' + correct_wrds + '<br>' +
                     'Mostly correct: ' + mostly_correct + '<br>' +
                     'Fully correct: ' + fully_correct + '<br>' +
