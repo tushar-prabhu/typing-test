@@ -341,8 +341,8 @@ function init_counter(e) {
                     //'<div style="display:flex;align-items:center;justify-content:center;">' + '<button style="height:20px;width:60px;border-radius:50px;" type="submit" value="submit">Submit</button>' + '</div>';
 
                     '<div style="display:flex;align-items:center;justify-content:center;background-color:rgba(12, 12, 12, 0.493);backdrop-filter: blur(4px);width: 120%;height: 40 vh; font-size:30px;color:#ffffff;font-weight:bolder;"><p>' +
-                    'Name: ' + name1 + '<br>' +
-                    'Roll No: ' + branch1 + '<br>' +
+                    'Forum Name: ' + name1 + '<br>' +
+                    'Serial No: ' + branch1 + '<br>' +
                     'WPM:' + correct_wrds + '<br>' +
                     'Mostly correct: ' + mostly_correct + '<br>' +
                     'Fully correct: ' + fully_correct + '<br>' +
